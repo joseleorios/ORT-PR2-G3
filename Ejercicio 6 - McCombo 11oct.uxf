@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><element><id>UMLClass</id><coordinates><x>652</x><y>312</y><w>182</w><h>169</h></coordinates><panel_attributes>/Producto/
+-
+-id:int
+-nombre:String
+-precio:double
+-
++getPrecio():double
+/-setPrecio():void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>366</x><y>91</y><w>182</w><h>117</h></coordinates><panel_attributes>Ticket
+-
+
+-
+-calcularTotal():double
++imprimirTicket():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>535</x><y>130</y><w>143</w><h>65</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*
+-items</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>808</x><y>559</y><w>182</w><h>117</h></coordinates><panel_attributes>ProductoIndividual
+-
+
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>468</y><w>195</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;130;40;130;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>546</y><w>234</w><h>143</h></coordinates><panel_attributes>ProductoCompuesto
+-
+
+-
++add(Producto):void
++remove(Producto):Producto
+-setPrecio():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>548</x><y>364</y><w>130</w><h>208</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..3
+-productos</panel_attributes><additional_attributes>80;10;10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>652</x><y>91</y><w>182</w><h>117</h></coordinates><panel_attributes>Item
+-
+-cantidad:int
+-
++calcularItem():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>195</y><w>117</w><h>143</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..*
+-productos</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>626</x><y>468</y><w>143</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;90;40;10;40;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>1523</x><y>78</y><w>39</w><h>208</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>925</x><y>117</y><w>390</w><h>221</h></coordinates><panel_attributes>SimpleMcCombo simp1 = new SimpleMcCombo()
+SuperMcCombo super1 = new SuperMcCombo()
+
+super1.add((Producto)simp1)
+
+
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element></diagram>
