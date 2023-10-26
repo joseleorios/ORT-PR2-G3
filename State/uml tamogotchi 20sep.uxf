@@ -1,0 +1,71 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><element><id>UMLClass</id><coordinates><x>144</x><y>104</y><w>160</w><h>152</h></coordinates><panel_attributes>Tamagochi
+--
+
+--
++Tamagochi(State)
++darDeTomar():void
++darDeComer():void
++hacerMimos():void
++pegarle():void
+-setStatus()
++getStatus()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>80</y><w>168</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+State
+--
+
+-
++darDeTomar():State
++darDeComer():State
++hacerMimos():State
++pegarle():State
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>312</y><w>168</w><h>96</h></coordinates><panel_attributes>FelizState
+--
+--
++FelizState(Tamagochi)
++darDeTomar():State
++darDeComer():State
++hacerMimos():State
++pegarle():State
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>464</x><y>320</y><w>168</w><h>104</h></coordinates><panel_attributes>TristeState
+--
+--
++TristeState(Tamagochi)
++darDeTomar():void
++darDeComer():void
++hacerMimos():void
++pegarle():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>320</y><w>168</w><h>96</h></coordinates><panel_attributes>HambrientoState
+--
+--
++HambrientoState(Tamagochi)
++darDeTomar():void
++darDeComer():void
++hacerMimos():void
++pegarle():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>320</y><w>168</w><h>96</h></coordinates><panel_attributes>SedientoState
+--
+--
++SedientoState(Tamagochi)
++darDeTomar():void
++darDeComer():void
++hacerMimos():void
++pegarle():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>296</x><y>136</y><w>120</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+-state
+m1=1</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>192</y><w>344</w><h>136</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>410;10;410;110;10;110;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>192</y><w>152</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>170;10;170;110;10;110;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>192</y><w>48</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110;40;110;40;160</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>192</y><w>224</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110;260;110;260;160</additional_attributes></element><element><id>UMLNote</id><coordinates><x>104</x><y>48</y><w>128</w><h>48</h></coordinates><panel_attributes>pikachu.darDeTomar(){
+	this.state.darDeTomar()
+}
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>576</x><y>72</y><w>224</w><h>184</h></coordinates><panel_attributes>Si el Tamagotchi  está Hambriento y
+le Doy de comer, el Tamagotchi  se pone Feliz.
+De la misma manera que  si está Sedientoy
+le Doy de tomaro si está Tristey le Hago mimos.
+
+•Si le Pego, independientemente  del estado
+en el que  esté, se pone Triste
+
+•Si las acciones
+que  hago son distintas  a las enunciadas
+arriba,  el comportamiento  no es importante,
+puede  hacer un  ruido,  hacer que vomita, etc,
+pero no va a pasar al estado indicado arriba.
+bg=red</panel_attributes><additional_attributes></additional_attributes></element></diagram>
