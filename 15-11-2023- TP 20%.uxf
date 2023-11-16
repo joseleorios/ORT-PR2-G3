@@ -1,0 +1,132 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><element><id>UMLClass</id><coordinates><x>415</x><y>250</y><w>80</w><h>100</h></coordinates><panel_attributes>/Mascota/
+--
+-nombre:String
+-peso:float
+-vacunada:boolean
+
+--
++Mascota(State)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+-setStatus()
++getStatus()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>280</y><w>50</w><h>50</h></coordinates><panel_attributes>Dueño
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>345</x><y>375</y><w>50</w><h>40</h></coordinates><panel_attributes>Perro
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>425</x><y>375</y><w>50</w><h>40</h></coordinates><panel_attributes>Gato
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>325</y><w>105</w><h>75</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+State
+--
+
+-
++darDeTomar():State
++darDeComer():State
++darMedicina():State
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>445</y><w>105</w><h>60</h></coordinates><panel_attributes>FelizState
+--
+--
++FelizState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>445</y><w>105</w><h>60</h></coordinates><panel_attributes>SedientoState
+--
+--
++SedientoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>295</x><y>445</y><w>105</w><h>60</h></coordinates><panel_attributes>EnfermoState
+--
+--
++EnfermoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>445</y><w>105</w><h>60</h></coordinates><panel_attributes>HambrientoState
+--
+--
++HambrientoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>395</y><w>110</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>200;10;200;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>395</y><w>110</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;200;60;200;100</additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>395</y><w>15</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>225</x><y>395</y><w>220</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;420;60;420;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>375</y><w>50</w><h>40</h></coordinates><panel_attributes>Conejo
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>325</y><w>145</w><h>20</h></coordinates><panel_attributes>lt=&lt;-
+- state</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>445</x><y>345</y><w>100</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;180;40;180;60</additional_attributes></element><element><id>Relation</id><coordinates><x>365</x><y>345</y><w>95</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;10;170;40;10;40;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>445</x><y>345</y><w>15</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>280</y><w>90</w><h>50</h></coordinates><panel_attributes>Doctor
+--
+
+--
++observar(Mascota):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>615</x><y>165</y><w>85</w><h>70</h></coordinates><panel_attributes>Persona
+--
+-nombre:String
+-apellido:String
+-dni:int
+-email:String
+-númeroCelular:int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>90</x><y>325</y><w>80</w><h>75</h></coordinates><panel_attributes>STATE
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>155</y><w>85</w><h>70</h></coordinates><panel_attributes>ClinicaVet
+--
+.nombre:String
+
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>325</y><w>230</w><h>35</h></coordinates><panel_attributes>-especialidad
+
+lt=&lt;-</panel_attributes><additional_attributes>10;40;440;40;440;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>25</x><y>395</y><w>70</w><h>35</h></coordinates><panel_attributes>Dependiendo de cómo esté cada mascota, ella
+responderá de manera distinta ante las acciones que puede realizar el doctor (Dar de
+comer, Dar de tomar, Dar Medicina), de la siguiente manera:
+● Si nuestra mascota está hambrienta y le doy de comer, se pone feliz. De la misma
+manera si está sediento y le doy de tomar o si está enfermo y le doy medicina.
+● Si le doy de comer y está feliz, de tanta comida se va a poner enfermo.
+● Si las acciones que hago son distintas a las enunciadas arriba, el comportamiento no
+es importante, puede hacer un ruido, hacer que vomite, etc, pero el estado va seguir
+siendo el mismo.
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>755</x><y>170</y><w>80</w><h>75</h></coordinates><panel_attributes>STRATEGY
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>185</x><y>150</y><w>75</w><h>75</h></coordinates><panel_attributes>composite
+bg=YELLOW</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>620</x><y>440</y><w>80</w><h>75</h></coordinates><panel_attributes>observer
+bg=GREEN</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>230</y><w>35</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>230</y><w>40</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;100</additional_attributes></element><element><id>UMLNote</id><coordinates><x>610</x><y>380</y><w>270</w><h>50</h></coordinates><panel_attributes>La aplicación a desarrollar le permitirá a los dueños (se sabe de ellos nombre,
+apellido, dni, email y número de celular) enterarse del estado de todas sus mascotas en
+tiempo real. Por ejemplo si ingreso a mi mascota que se encuentra enferma, y deja de
+estarlo, debería recibir una notificación en mi correo electrónico. Por otro lado los Doctores
+pueden decidir a qué Mascotas hacerle seguimiento continuo, de tal manera que también
+pueden recibir estas notificaciones así no se encuentren de guardia en la clínica.
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>465</x><y>125</y><w>85</w><h>70</h></coordinates><panel_attributes>/CriterioAtención/
+&lt;&lt;Enum&gt;&gt;
+--
+_OPERACIÓN_
+_INYECCIÓN_
+_MASAJEAR_
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>755</x><y>110</y><w>270</w><h>50</h></coordinates><panel_attributes>Los Doctores tienen distinto criterio a la hora de atender (Realizar una operación,
+Inyectar medicina, Hacer masajes) a las mascotas, que pueden variar dependiendo de los
+síntomas que presente. El sistema debe soportar que el doctor cambie dicha manera en que
+atiende las mascotas a demanda. Dichos criterios deben ser únicos y compartidos por todos
+los Doctores de la veterinaria.
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>85</y><w>50</w><h>50</h></coordinates><panel_attributes>Atencion
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>105</y><w>75</w><h>185</h></coordinates><panel_attributes>-doctor
+
+lt=&lt;-</panel_attributes><additional_attributes>90;350;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>105</y><w>150</w><h>170</h></coordinates><panel_attributes>-mascota
+
+lt=&lt;-</panel_attributes><additional_attributes>10;320;150;320;150;10;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>515</x><y>80</y><w>125</w><h>55</h></coordinates><panel_attributes>-criterioAtencion
+
+lt=&lt;-</panel_attributes><additional_attributes>10;90;10;20;230;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>75</x><y>95</y><w>265</w><h>50</h></coordinates><panel_attributes>Al momento de facturar los servicios realizados, la veterinaria deberá poder ofrecer
+tanto tratamientos individuales como conjuntos de tratamientos que incluyan varios
+procedimientos a realizar por cada Doctor (como por ejemplo, Vacunar como tratamiento
+individual o “Tiene un año”, el paquete que incluye todos los tratamientos a aplicarle a una
+mascota al cumplir un año, como vacunarlo, hacerle masajes, etc.).
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>865</x><y>165</y><w>80</w><h>75</h></coordinates><panel_attributes>Singleton
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>795</x><y>315</y><w>265</w><h>50</h></coordinates><panel_attributes>Por último, a las Mascotas atendidas en la veterinaria se les coloca un collar
+antipulgas, que puede ser de distintas marcas (Antipulg, PulgByeBye o “YaNo Mepica”). El
+Doctor debe colocarles el collar que la veterinaria esté usando ese día sin que le importe de
+que marca es.
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>925</x><y>370</y><w>80</w><h>75</h></coordinates><panel_attributes>FACTORY
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>870</x><y>245</y><w>270</w><h>35</h></coordinates><panel_attributes> El sistema debe soportar que el doctor cambie dicha manera en que
+atiende las mascotas a demanda. Dichos criterios deben ser únicos y compartidos por todos
+los Doctores de la veterinaria
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element></diagram>
