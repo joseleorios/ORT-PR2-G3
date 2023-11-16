@@ -1,0 +1,193 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>fg=green; bg=yellow; lw=2; lt=.; transparency=50;</help_text><element><id>UMLClass</id><coordinates><x>688</x><y>328</y><w>128</w><h>192</h></coordinates><panel_attributes>/Mascota/
+&lt;&lt;Abstracta&gt;&gt;
+--
+-nombre:String
+-peso:float
+-vacunada:boolean
+--
++Mascota(State)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+-setStatus()
++getStatus()
++notificarSuscriptores()
++suscribir(Suscriptor)
++desSuscribir(Suscriptor)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>968</x><y>304</y><w>120</w><h>72</h></coordinates><panel_attributes>Dueño
+--
+
+--
++actualizacion(Mascota)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>544</y><w>80</w><h>64</h></coordinates><panel_attributes>Perro
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>704</x><y>544</y><w>80</w><h>64</h></coordinates><panel_attributes>Gato
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>464</y><w>168</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+State
+--
+
+-
++darDeTomar():State
++darDeComer():State
++darMedicina():State
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>136</x><y>656</y><w>168</w><h>96</h></coordinates><panel_attributes>FelizState
+--
+--
++FelizState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>656</y><w>168</w><h>96</h></coordinates><panel_attributes>SedientoState
+--
+--
++SedientoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>496</x><y>656</y><w>168</w><h>96</h></coordinates><panel_attributes>EnfermoState
+--
+--
++EnfermoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>656</y><w>168</w><h>96</h></coordinates><panel_attributes>HambrientoState
+--
+--
++HambrientoState(Mascota)
++darDeTomar():void
++darDeComer():void
++darMedicina():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>232</x><y>576</y><w>176</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>200;10;200;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>576</y><w>176</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;200;60;200;100</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>576</y><w>24</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>576</y><w>352</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;420;60;420;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>840</x><y>544</y><w>104</w><h>64</h></coordinates><panel_attributes>Conejo
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>472</x><y>464</y><w>232</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+- state</panel_attributes><additional_attributes>10;20;270;20</additional_attributes></element><element><id>Relation</id><coordinates><x>736</x><y>512</y><w>160</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;20;180;20;180;40</additional_attributes></element><element><id>Relation</id><coordinates><x>608</x><y>512</y><w>152</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;10;170;20;10;20;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>736</x><y>512</y><w>24</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1104</x><y>304</y><w>128</w><h>72</h></coordinates><panel_attributes>Doctor
+--
+
+--
++observar(Mascota):void
++actualizacion(Mascota)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1016</x><y>168</y><w>136</w><h>112</h></coordinates><panel_attributes>Persona
+--
+-nombre:String
+-apellido:String
+-dni:int
+-email:String
+-númeroCelular:int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>168</x><y>464</y><w>128</w><h>120</h></coordinates><panel_attributes>STATE
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>296</y><w>160</w><h>120</h></coordinates><panel_attributes>ClinicaVet
+--
+-nombre:String
+
+--
++ClinicaVet(String)
++internarNuevaMascota(Mascota)
++registrarDoctor(Doctor)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>808</x><y>368</y><w>368</w><h>152</h></coordinates><panel_attributes>-especialidad
+
+lt=&lt;-</panel_attributes><additional_attributes>10;160;440;160;440;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>0</x><y>456</y><w>112</w><h>56</h></coordinates><panel_attributes>Dependiendo de cómo esté cada mascota, ella
+responderá de manera distinta ante las acciones que puede realizar el doctor (Dar de
+comer, Dar de tomar, Dar Medicina), de la siguiente manera:
+● Si nuestra mascota está hambrienta y le doy de comer, se pone feliz. De la misma
+manera si está sediento y le doy de tomar o si está enfermo y le doy medicina.
+● Si le doy de comer y está feliz, de tanta comida se va a poner enfermo.
+● Si las acciones que hago son distintas a las enunciadas arriba, el comportamiento no
+es importante, puede hacer un ruido, hacer que vomite, etc, pero el estado va seguir
+siendo el mismo.
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1240</x><y>216</y><w>128</w><h>120</h></coordinates><panel_attributes>STRATEGY
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>72</x><y>104</y><w>120</w><h>120</h></coordinates><panel_attributes>composite
+bg=YELLOW</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1016</x><y>648</y><w>128</w><h>120</h></coordinates><panel_attributes>observer
+bg=GREEN</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1008</x><y>272</y><w>56</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>1104</x><y>272</y><w>56</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;40</additional_attributes></element><element><id>UMLNote</id><coordinates><x>1000</x><y>552</y><w>432</w><h>80</h></coordinates><panel_attributes>La aplicación a desarrollar le permitirá a los dueños (se sabe de ellos nombre,
+apellido, dni, email y número de celular) enterarse del estado de todas sus mascotas en
+tiempo real. Por ejemplo si ingreso a mi mascota que se encuentra enferma, y deja de
+estarlo, debería recibir una notificación en mi correo electrónico. Por otro lado los Doctores
+pueden decidir a qué Mascotas hacerle seguimiento continuo, de tal manera que también
+pueden recibir estas notificaciones así no se encuentren de guardia en la clínica.
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>768</x><y>144</y><w>136</w><h>112</h></coordinates><panel_attributes>/CriterioAtención/
+&lt;&lt;Enum&gt;&gt;
+--
+_OPERACIÓN_
+_INYECCIÓN_
+_MASAJEAR_
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1232</x><y>120</y><w>432</w><h>80</h></coordinates><panel_attributes>Los Doctores tienen distinto criterio a la hora de atender (Realizar una operación,
+Inyectar medicina, Hacer masajes) a las mascotas, que pueden variar dependiendo de los
+síntomas que presente. El sistema debe soportar que el doctor cambie dicha manera en que
+atiende las mascotas a demanda. Dichos criterios deben ser únicos y compartidos por todos
+los Doctores de la veterinaria.
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>80</y><w>80</w><h>80</h></coordinates><panel_attributes>Atencion
+--
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1104</x><y>112</y><w>120</w><h>208</h></coordinates><panel_attributes>-doctor
+
+lt=&lt;-</panel_attributes><additional_attributes>90;240;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>808</x><y>112</y><w>240</w><h>272</h></coordinates><panel_attributes>-mascota
+
+lt=&lt;-</panel_attributes><additional_attributes>10;320;150;320;150;10;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>848</x><y>72</y><w>200</w><h>88</h></coordinates><panel_attributes>-criterioAtencion
+
+lt=&lt;-</panel_attributes><additional_attributes>10;90;10;20;230;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>96</x><y>0</y><w>424</w><h>80</h></coordinates><panel_attributes>Al momento de facturar los servicios realizados, la veterinaria deberá poder ofrecer
+tanto tratamientos individuales como conjuntos de tratamientos que incluyan varios
+procedimientos a realizar por cada Doctor (como por ejemplo, Vacunar como tratamiento
+individual o “Tiene un año”, el paquete que incluye todos los tratamientos a aplicarle a una
+mascota al cumplir un año, como vacunarlo, hacerle masajes, etc.).
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1408</x><y>208</y><w>128</w><h>120</h></coordinates><panel_attributes>Singleton
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1296</x><y>448</y><w>424</w><h>80</h></coordinates><panel_attributes>Por último, a las Mascotas atendidas en la veterinaria se les coloca un collar
+antipulgas, que puede ser de distintas marcas (Antipulg, PulgByeBye o “YaNo Mepica”). El
+Doctor debe colocarles el collar que la veterinaria esté usando ese día sin que le importe de
+que marca es.
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>1504</x><y>536</y><w>128</w><h>120</h></coordinates><panel_attributes>FACTORY
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>1416</x><y>336</y><w>432</w><h>56</h></coordinates><panel_attributes> El sistema debe soportar que el doctor cambie dicha manera en que
+atiende las mascotas a demanda. Dichos criterios deben ser únicos y compartidos por todos
+los Doctores de la veterinaria
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>824</x><y>432</y><w>200</w><h>40</h></coordinates><panel_attributes>-suscriptores[]
+lt=&lt;-
+group=group-0
+m1=0..n</panel_attributes><additional_attributes>230;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>504</x><y>288</y><w>736</w><h>240</h></coordinates><panel_attributes>fg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1008</x><y>416</y><w>128</w><h>64</h></coordinates><panel_attributes>/Suscriptor/
+&lt;&lt;interface&gt;&gt;
+--
+
+--
++actualizacion(Mascota)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>368</y><w>72</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>70;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1072</x><y>368</y><w>64</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;60;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>408</y><w>112</w><h>80</h></coordinates><panel_attributes>-mascotas
+lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>120;70;10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>808</x><y>368</y><w>192</w><h>48</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;40;220;40;220;10</additional_attributes></element><element><id>Relation</id><coordinates><x>808</x><y>440</y><w>152</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=group-0</panel_attributes><additional_attributes>10;10;170;10</additional_attributes></element><element><id>Relation</id><coordinates><x>664</x><y>304</y><w>320</w><h>24</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>380;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>656</x><y>280</y><w>472</w><h>40</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>570;30;570;20;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>112</x><y>440</y><w>584</w><h>24</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;710;10</additional_attributes></element><element><id>Relation</id><coordinates><x>112</x><y>440</y><w>24</w><h>344</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;10;410</additional_attributes></element><element><id>Relation</id><coordinates><x>112</x><y>760</y><w>776</w><h>24</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;950;10</additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>304</y><w>208</w><h>40</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;240;30</additional_attributes></element><element><id>Relation</id><coordinates><x>848</x><y>320</y><w>32</w><h>224</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>20;10;10;260</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>608</y><w>24</w><h>176</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>304</y><w>24</w><h>160</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>848</x><y>520</y><w>104</w><h>24</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>864</x><y>608</y><w>96</w><h>24</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>928</x><y>520</y><w>32</w><h>112</h></coordinates><panel_attributes>fg=red
+group=group-1</panel_attributes><additional_attributes>10;10;20;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>512</x><y>112</y><w>136</w><h>112</h></coordinates><panel_attributes>Factura
+-
+
+-
+-calcularTotal():double
++imprimirTicket():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>576</x><y>216</y><w>24</w><h>88</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>152</y><w>88</w><h>40</h></coordinates><panel_attributes>-items
+lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>312</x><y>112</y><w>136</w><h>72</h></coordinates><panel_attributes>Item
+-
+-cantidad:int
+-
++calcularItem():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>304</x><y>240</y><w>136</w><h>88</h></coordinates><panel_attributes>/Producto/
+-
+-id:int
+-nombre:String
+-precio:double
+-
++getPrecio():double
+-setPrecio():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>176</y><w>72</w><h>80</h></coordinates><panel_attributes>-productos
+lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>352</y><w>136</w><h>72</h></coordinates><panel_attributes>ProductoIndividual
+-
+
+-
++ProductoIndividual()
++getPrecio():double
+-setPrecio():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>208</x><y>352</y><w>136</w><h>72</h></coordinates><panel_attributes>ProductoCompuesto
+-
+-
++add(Producto):void
++remove(Producto):Producto
++getPrecio():double
+-setPrecio():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>320</y><w>120</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;130;30;10;30;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>320</y><w>104</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;30;110;30;110;40</additional_attributes></element><element><id>UMLNote</id><coordinates><x>504</x><y>288</y><w>736</w><h>240</h></coordinates><panel_attributes>fg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>96</y><w>480</w><h>344</h></coordinates><panel_attributes>fg=yellow</panel_attributes><additional_attributes></additional_attributes></element></diagram>
